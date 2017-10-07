@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    
+    
 </head>
 
 <body>
@@ -35,9 +37,13 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#intro">投稿文章</a></li>
-                    <li><a href="#work">研究者與單位</a></li>
-                    <li><a href="#about">舉辦時間地點</a></li>
+                    <!-- 最好是奇數項，不然電腦版上字的對齊會亂掉 -->
+                    <li><a href="#papers">投稿文章</a></li>
+                    <li><a href="#location">舉辦地點</a></li>
+                    <li><a href="#date">舉辦日期</a></li>
+                    <li><a href="#researcher">研究者</a></li>
+                    <li><a href="#five">第五項(未定)</a></li>
+                    
 <!--                    <li><a href="#contact">Contact</a></li>-->
                     <!--<li><a href="#elements">Elements</a></li>-->
                 </ul>
@@ -48,18 +54,21 @@
         <div id="main">
 
             <!-- 投稿文章 -->
-            <article id="intro">
+            <article id="papers">
                 <h2 class="major">投稿文章</h2>
                 <span class="image main"><img src="images/投稿篇數折線圖.png" alt="" /></span>
                 <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+                
+                <img src="images/投稿篇數折線圖.png" alt="" class="image main">
+                
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
                 <br>
                 (最後要加上返回首頁的連結)</p>
             </article>
 
             <!-- 研究者與單位 -->
-            <article id="work">
-                <h2 class="major">研究者與單位</h2>
+            <article id="researcher">
+                <h2 class="major">研究者</h2>
                 <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
                 <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
                 <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.
@@ -67,13 +76,33 @@
                 (最後要加上返回首頁的連結)</p>
             </article>
 
-            <!-- 舉辦時間地點 -->
-            <article id="about">
-                <h2 class="major">舉辦時間地點</h2>
+            <!-- 舉辦地點 -->
+            <article id="location">
+                <h2 class="major">舉辦地點</h2>
+                <span class="image main"><img src="images/舉辦時間.jpeg" alt="" /></span>
+                <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.
+                <br>
+                (最後要加上返回首頁的連結)</p>     
+            </article>
+
+            
+            <!-- 舉辦時間 -->
+            <article id="date">
+                <h2 class="major">舉辦日期</h2>
                 <span class="image main"><img src="images/舉辦時間.jpeg" alt="" /></span>
                 <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.
                 <br>
                 (最後要加上返回首頁的連結)</p>
+            </article>
+            
+                        <!-- 第五項 -->
+            <article id="five">
+                <h2 class="major">第五項</h2>
+                <span class="image main"><img src="images/舉辦時間.jpeg" alt="" /></span>
+                <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.
+                <br>
+                (最後要加上返回首頁的連結)</p>
+
             </article>
 
             <!-- Contact 暫不使用 -->
@@ -359,12 +388,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
             </ul>
 
 
-            <p class="copyright">&copy; 製作團隊: <a href="#">一群被動物玩的人</a></p>
+            <p class="copyright">&copy; 製作團隊：<a href="#">一群被動物玩的人</a>｜版型來源：html5up.net @ajlkn </p>
         </footer>
 
     </div>
 
-    <!-- BG -->
+    <!-- BG 背景圖要到main.css更改 -->    
     <div id="bg"></div>
 
     <!-- Scripts -->
@@ -372,7 +401,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
+    
 </body>
 
 </html>

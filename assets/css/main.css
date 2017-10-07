@@ -1556,6 +1556,8 @@
 
 		}
 
+
+
 /* Footer */
 
 	#footer {
@@ -1574,7 +1576,7 @@
 			font-size: 0.6rem;
 			opacity: 0.75;
 			margin-bottom: 0;
-			text-transform: uppercase;
+/*			text-transform: uppercase; 英文一定要顯示大寫*/
 		}
 
 		body.is-article-visible #footer {
