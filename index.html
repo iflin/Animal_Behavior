@@ -27,22 +27,22 @@
             <div class="logo">
                 <!--鑽石圖，可以換成動物icon gif 輪播-->
                 <!--他是預設使用Web Icon Font 可以從這裡找圖 http://fontawesome.io/icons/ -->
-                <span class="icon fa-github-alt"></span>
+                <span class="icon fa-hand-spock-o"></span>
             </div>
             <div class="content">
                 <div class="inner">
-                    <h1>動物行為暨生態研討會</h1>
+                    <h1>動物行為暨生態研討會歷史紀錄</h1>
                     <p>動行研討會是台灣每年最大的一場，動物研究發表與交流的聚會。每年動物研究相關人員，大多會參加這場聚會。許多研究也會在這場研討會發表...(未完)</p>
                 </div>
             </div>
             <nav>
                 <ul>
                     <!-- 最好是奇數項，不然電腦版上字的對齊會亂掉 -->
-                    <li><a href="#papers">投稿文章</a></li>
+                    <li><a href="#papers">投稿文章數量</a></li>
                     <li><a href="#location">舉辦地點</a></li>
                     <li><a href="#date">舉辦日期</a></li>
                     <li><a href="#researcher">研究者</a></li>
-                    <li><a href="#five">第五項(題目嗎？)</a></li>
+                    <li><a href="#five">歷屆投稿題目</a></li>
                     
 <!--                    <li><a href="#contact">Contact</a></li>-->
                     <!--<li><a href="#elements">Elements</a></li>-->
@@ -53,13 +53,20 @@
         <!-- Main -->
         <div id="main">
 
-            <!-- 投稿文章 -->
+            <!-- 投稿文章數量 -->
             <article id="papers">
-                <h2 class="major">投稿文章</h2>
-                <span class="image main"><img src="images/投稿篇數折線圖.png" alt="" /></span>
+                <h2 class="major">投稿文章數量</h2>
+                
+<!--<span class="image main"><img src="images/投稿篇數折線圖.png" alt="" /></span>-->
+                
                 <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
                 
-                <img src="images/投稿篇數折線圖.png" alt="" class="image main">
+                <!-- 加入D3js折線圖html部分 -->
+                <svg width=100% height='400'></svg>
+                <div id='tooltip' style='position:absolute;background-color:lightgray;padding:5px'></div>
+                <!-- 加入D3js折線圖js部分 -->
+                <script src="http://d3js.org/d3.v4.min.js"></script>
+                <script src="D3_line.js"></script>
                 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
                 </p>
@@ -68,7 +75,7 @@
                     <li><a href="#location">舉辦地點</a></li>
                     <li><a href="#date">舉辦日期</a></li>
                     <li><a href="#researcher">研究者</a></li>
-                    <li><a href="#five">第五項(未定)</a></li>     
+                    <li><a href="#five">歷屆投稿題目</a></li>     
                 </ul>
             </article>
 
@@ -82,10 +89,10 @@
                 
                 <ul>
                     <!-- 最好是奇數項，不然電腦版上字的對齊會亂掉 -->
-                    <li><a href="#papers">投稿文章</a></li>
+                    <li><a href="#papers">投稿文章數量</a></li>
                     <li><a href="#location">舉辦地點</a></li>
                     <li><a href="#date">舉辦日期</a></li>
-                    <li><a href="#five">第五項(未定)</a></li>
+                    <li><a href="#five">歷屆投稿題目</a></li>
                 </ul>    
                 
             </article>
@@ -99,10 +106,10 @@
                 
                 <ul>
                     <!-- 最好是奇數項，不然電腦版上字的對齊會亂掉 -->
-                    <li><a href="#papers">投稿文章</a></li>
+                    <li><a href="#papers">投稿文章數量</a></li>
                     <li><a href="#date">舉辦日期</a></li>
                     <li><a href="#researcher">研究者</a></li>
-                    <li><a href="#five">第五項(未定)</a></li>
+                    <li><a href="#five">歷屆投稿題目</a></li>
                 </ul>      
             </article>
 
@@ -116,24 +123,24 @@
                 
                 <ul>
                     <!-- 最好是奇數項，不然電腦版上字的對齊會亂掉 -->
-                    <li><a href="#papers">投稿文章</a></li>
+                    <li><a href="#papers">投稿文章數量</a></li>
                     <li><a href="#location">舉辦地點</a></li>
                     <li><a href="#researcher">研究者</a></li>
-                    <li><a href="#five">第五項(未定)</a></li>
+                    <li><a href="#five">歷屆投稿題目</a></li>
                 </ul>    
                 
             </article>
             
                         <!-- 第五項 -->
             <article id="five">
-                <h2 class="major">第五項(未定)</h2>
+                <h2 class="major">歷屆投稿題目</h2>
                 <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
                 <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.
                 </p>
                 
                 <ul>
                     <!-- 最好是奇數項，不然電腦版上字的對齊會亂掉 -->
-                    <li><a href="#papers">投稿文章</a></li>
+                    <li><a href="#papers">投稿文章數量</a></li>
                     <li><a href="#location">舉辦地點</a></li>
                     <li><a href="#date">舉辦日期</a></li>
                     <li><a href="#researcher">研究者</a></li>
