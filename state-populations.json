@@ -1,158 +1,314 @@
 [
   {
-    "name": "California",
+    "name": "總投稿數量",
     "show": true,
-    "color": "red",
-    "currentPopulation": 37253956,
+    "color": "#ff9797",
+    "currentPopulation": 322,
     "history": [
-      {
-        "year": 1910,
-        "population": 2377549
-      },
-      {
-        "year": 1920,
-        "population": 3426861
-      },
-      {
-        "year": 1930,
-        "population": 5677251
-      },
-      {
-        "year": 1940,
-        "population": 6907387
-      },
-      {
-        "year": 1950,
-        "population": 10586223
-      },
-      {
-        "year": 1960,
-        "population": 15717204
-      },
-      {
-        "year": 1970,
-        "population": 19953134
-      },
-      {
-        "year": 1980,
-        "population": 23667902
-      },
-      {
-        "year": 1990,
-        "population": 29760021
-      },
-      {
-        "year": 2000,
-        "population": 33871648
-      },
-      {
-        "year": 2010,
-        "population": 37253956
-      }
-    ]
+  {
+    "year": 1994,
+    "population": 21
   },
   {
-    "name": "Michigan",
-    "show": true,
-    "color": "blue",
-    "currentPopulation": 9883640,
-    "history": [
-      {
-        "year": 1910,
-        "population": 2810173
-      },
-      {
-        "year": 1920,
-        "population": 3668412
-      },
-      {
-        "year": 1930,
-        "population": 4842325
-      },
-      {
-        "year": 1940,
-        "population": 5256106
-      },
-      {
-        "year": 1950,
-        "population": 6371766
-      },
-      {
-        "year": 1960,
-        "population": 7823194
-      },
-      {
-        "year": 1970,
-        "population": 8875083
-      },
-      {
-        "year": 1980,
-        "population": 9262078
-      },
-      {
-        "year": 1990,
-        "population": 9295297
-      },
-      {
-        "year": 2000,
-        "population": 9938444
-      },
-      {
-        "year": 2010,
-        "population": 9883640
-      }
-    ]
+    "year": 1995,
+    "population": 21
   },
   {
-    "name": "Texas",
+    "year": 1996,
+    "population": 30
+  },
+  {
+    "year": 1997,
+    "population": 44
+  },
+  {
+    "year": 1998,
+    "population": 72
+  },
+  {
+    "year": 1999,
+    "population": 76
+  },
+  {
+    "year": 2000,
+    "population": 89
+  },
+  {
+    "year": 2001,
+    "population": 90
+  },
+  {
+    "year": 2002,
+    "population": 106
+  },
+  {
+    "year": 2003,
+    "population": 98
+  },
+  {
+    "year": 2004,
+    "population": 145
+  },
+  {
+    "year": 2005,
+    "population": 115
+  },
+  {
+    "year": 2006,
+    "population": 152
+  },
+  {
+    "year": 2007,
+    "population": 173
+  },
+  {
+    "year": 2008,
+    "population": 230
+  },
+  {
+    "year": 2009,
+    "population": 226
+  },
+  {
+    "year": 2010,
+    "population": 302
+  },
+  {
+    "year": 2011,
+    "population": 293
+  },
+  {
+    "year": 2012,
+    "population": 295
+  },
+  {
+    "year": 2013,
+    "population": 296
+  },
+  {
+    "year": 2014,
+    "population": 284
+  },
+  {
+    "year": 2015,
+    "population": 327
+  },
+  {
+    "year": 2016,
+    "population": 273
+  },
+  {
+    "year": 2017,
+    "population": 322
+  }
+]
+  },
+  {
+    "name": "口頭報告數量",
     "show": true,
-    "color": "green",
-    "currentPopulation": 25145561,
+    "color": "#52e395",
+    "currentPopulation": 155,
     "history": [
-      {
-        "year": 1910,
-        "population": 3896542
-      },
-      {
-        "year": 1920,
-        "population": 4663228
-      },
-      {
-        "year": 1930,
-        "population": 5824715
-      },
-      {
-        "year": 1940,
-        "population": 6414824
-      },
-      {
-        "year": 1950,
-        "population": 7711194
-      },
-      {
-        "year": 1960,
-        "population": 9579677
-      },
-      {
-        "year": 1970,
-        "population": 11196730
-      },
-      {
-        "year": 1980,
-        "population": 14229191
-      },
-      {
-        "year": 1990,
-        "population": 16986510
-      },
-      {
-        "year": 2000,
-        "population": 20851820
-      },
-      {
-        "year": 2010,
-        "population": 25145561
-      }
-    ]
+  {
+    "year": 1994,
+    "population": 21
+  },
+  {
+    "year": 1995,
+    "population": 21
+  },
+  {
+    "year": 1996,
+    "population": 30
+  },
+  {
+    "year": 1997,
+    "population": 44
+  },
+  {
+    "year": 1998,
+    "population": 59
+  },
+  {
+    "year": 1999,
+    "population": 34
+  },
+  {
+    "year": 2000,
+    "population": 48
+  },
+  {
+    "year": 2001,
+    "population": 55
+  },
+  {
+    "year": 2002,
+    "population": 59
+  },
+  {
+    "year": 2003,
+    "population": 55
+  },
+  {
+    "year": 2004,
+    "population": 81
+  },
+  {
+    "year": 2005,
+    "population": 69
+  },
+  {
+    "year": 2006,
+    "population": 86
+  },
+  {
+    "year": 2007,
+    "population": 75
+  },
+  {
+    "year": 2008,
+    "population": 96
+  },
+  {
+    "year": 2009,
+    "population": 100
+  },
+  {
+    "year": 2010,
+    "population": 129
+  },
+  {
+    "year": 2011,
+    "population": 117
+  },
+  {
+    "year": 2012,
+    "population": 138
+  },
+  {
+    "year": 2013,
+    "population": 142
+  },
+  {
+    "year": 2014,
+    "population": 126
+  },
+  {
+    "year": 2015,
+    "population": 155
+  },
+  {
+    "year": 2016,
+    "population": 113
+  },
+  {
+    "year": 2017,
+    "population": 155
+  }
+]
+  },
+  {
+    "name": "海報數量",
+    "show": true,
+    "color": "#e59afc",
+    "currentPopulation": 165,
+    "history": [
+  {
+    "year": 1994,
+    "population": 0
+  },
+  {
+    "year": 1995,
+    "population": 0
+  },
+  {
+    "year": 1996,
+    "population": 0
+  },
+  {
+    "year": 1997,
+    "population": 0
+  },
+  {
+    "year": 1998,
+    "population": 13
+  },
+  {
+    "year": 1999,
+    "population": 41
+  },
+  {
+    "year": 2000,
+    "population": 39
+  },
+  {
+    "year": 2001,
+    "population": 34
+  },
+  {
+    "year": 2002,
+    "population": 45
+  },
+  {
+    "year": 2003,
+    "population": 41
+  },
+  {
+    "year": 2004,
+    "population": 61
+  },
+  {
+    "year": 2005,
+    "population": 42
+  },
+  {
+    "year": 2006,
+    "population": 64
+  },
+  {
+    "year": 2007,
+    "population": 94
+  },
+  {
+    "year": 2008,
+    "population": 132
+  },
+  {
+    "year": 2009,
+    "population": 126
+  },
+  {
+    "year": 2010,
+    "population": 170
+  },
+  {
+    "year": 2011,
+    "population": 171
+  },
+  {
+    "year": 2012,
+    "population": 153
+  },
+  {
+    "year": 2013,
+    "population": 150
+  },
+  {
+    "year": 2014,
+    "population": 151
+  },
+  {
+    "year": 2015,
+    "population": 168
+  },
+  {
+    "year": 2016,
+    "population": 160
+  },
+  {
+    "year": 2017,
+    "population": 165
+  }
+]
   }
 ]
