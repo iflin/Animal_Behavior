@@ -23,7 +23,7 @@ chart.append('text').html('歷屆投稿文章數量').attr('id','gtitle').attr('
   
 // Load the data and draw a chart
 let states, tipBox;
-d3.json('state-populations.json', d => {
+d3.json('year-papers.json', d => {
   states = d;
 
   chart.selectAll()
@@ -41,9 +41,9 @@ d3.json('state-populations.json', d => {
     .html(d => d.name)
     .attr('fill', d => d.color)
     .attr('alignment-baseline', 'middle')
-    .attr('x', width)
+    .attr('x', width-5)
     .attr('dx', '.5em')
-    .attr('y', d => y(d.currentPopulation));
+    .attr('y', d => y(d.tagY));//曲線尾巴的文字的Y軸位置
     
   tipBox = chart.append('rect')
     .attr('width', width)

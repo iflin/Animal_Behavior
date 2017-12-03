@@ -3,7 +3,7 @@
     "name": "總投稿數量",
     "show": true,
     "color": "#ff9797",
-    "currentPopulation": 322,
+    "tagY": 322,
     "history": [
   {
     "year": 1994,
@@ -107,7 +107,7 @@
     "name": "口頭報告數量",
     "show": true,
     "color": "#52e395",
-    "currentPopulation": 155,
+    "tagY": 150,
     "history": [
   {
     "year": 1994,
@@ -211,7 +211,7 @@
     "name": "海報數量",
     "show": true,
     "color": "#e59afc",
-    "currentPopulation": 165,
+    "tagY": 170,  
     "history": [
   {
     "year": 1994,
