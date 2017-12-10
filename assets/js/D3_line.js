@@ -23,7 +23,7 @@ chart.append('text').html('歷屆投稿文章數量').attr('id','gtitle').attr('
   
 // Load the data and draw a chart
 let states, tipBox;
-d3.json('year-papers.json', d => {
+d3.json('data/year-papers.json', d => {
   states = d;
 
   chart.selectAll()

@@ -39,10 +39,12 @@
                 <ul>
                     <!-- 最好是奇數項，不然電腦版上字的對齊會亂掉 -->
                     <li><a href="#papers">投稿文章數量</a></li>
+                    <li><a href="#researcher">研究者</a></li>
+                    <li><a href="#paper_title">歷屆投稿題目</a></li>
                     <li><a href="#location">舉辦地點</a></li>
                     <li><a href="#date">舉辦日期</a></li>
-                    <li><a href="#researcher">研究者</a></li>
-                    <li><a href="#five">歷屆投稿題目</a></li>
+
+
                     
 <!--                    <li><a href="#contact">Contact</a></li>-->
                     <!--<li><a href="#elements">Elements</a></li>-->
@@ -59,7 +61,7 @@
                 
 <!--<span class="image main"><img src="images/投稿篇數折線圖.png" alt="" /></span>-->
                 
-                <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+                <p>這裡可以做一張總覽，這幾屆總共發表幾篇，口頭跟海報各有幾篇，比例多少</p>
                 
                 <!-- 加入D3js折線圖html部分 -->
                 <svg width='600' height='400'></svg>
@@ -81,31 +83,37 @@
 
                 </style>
                 
+                
+                
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
                 </p>
                 
                 <ul>
+                    <li><a href="#researcher">研究者</a></li>
+                    <li><a href="#paper_title">歷屆投稿題目</a></li>
                     <li><a href="#location">舉辦地點</a></li>
                     <li><a href="#date">舉辦日期</a></li>
-                    <li><a href="#researcher">研究者</a></li>
-                    <li><a href="#five">歷屆投稿題目</a></li>     
                 </ul>
             </article>
 
-            <!-- 研究者與單位 -->
+            <!-- 研究者 -->
             <article id="researcher">
                 <h2 class="major">研究者</h2>
                 <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-                <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-                <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.
-                </p>
+                
+                <h3>預計做兩張</h3>
+                <p>一張Network圖：表示每個作者發表文章數量跟合作狀況。</p>
+                
+                <p>一張做長條圖(預計)：表示發表篇數的人數分布，只發表一篇的人最多</p>
+                
+
                 
                 <ul>
                     <!-- 最好是奇數項，不然電腦版上字的對齊會亂掉 -->
                     <li><a href="#papers">投稿文章數量</a></li>
+                    <li><a href="#paper_title">歷屆投稿題目</a></li>
                     <li><a href="#location">舉辦地點</a></li>
                     <li><a href="#date">舉辦日期</a></li>
-                    <li><a href="#five">歷屆投稿題目</a></li>
                 </ul>    
                 
             </article>
@@ -114,20 +122,144 @@
             <article id="location">
                 <h2 class="major">舉辦地點</h2>
                 <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+                                
                 <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.
                 </p>   
+                
+                <div id="map" style="height:300px;"></div>
+
+    <script>
+        //畫出地圖    
+        function initMap() {
+
+            //設定地圖初始的位置與尺度  
+            var map; //畫出地圖 
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 25.015468,
+                    lng: 121.5429422
+                },
+                zoom: 7,
+
+                //控制捲動控制項目
+                gestureHandling: 'auto',
+
+
+                //設定地圖樣式
+                styles: [{
+                        "featureType": "administrative",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#444444"
+                        }]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "all",
+                        "stylers": [{
+                            "color": "#f2f2f2"
+                        }]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "all",
+                        "stylers": [{
+                            "visibility": "off"
+                        }]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "all",
+                        "stylers": [{
+                                "saturation": -100
+                            },
+                            {
+                                "lightness": 45
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "all",
+                        "stylers": [{
+                            "visibility": "simplified"
+                        }]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.icon",
+                        "stylers": [{
+                            "visibility": "off"
+                        }]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "all",
+                        "stylers": [{
+                            "visibility": "off"
+                        }]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "all",
+                        "stylers": [{
+                                "color": "#46bcec"
+                            },
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    }
+                ]
+
+            });
+
+            //加上標記  
+            //先給標記經緯度
+            var taipei = {
+                lat: 25.015468,
+                lng: 121.5429422
+            };
+            //畫出標記
+            var marker = new google.maps.Marker({
+                position: taipei,
+                map: map
+            });
+
+
+            //加入資訊框內容
+              //資訊內容
+            var contentString =
+                '<h3>測試</h3>';
+            
+            //設定資訊匡變數
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+           
+            //連結資訊框跟點的位置
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+
+        }
+    </script>
+
+
+    <!--加入個人Key的API，同時可以在這裡強制顯示語言-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB12QIf5jaEXri7i4BM8YzTybUJQwq2pqs&language=zh-tw&region=tw&callback=initMap" async defer></script>
                 
                 <ul>
                     <!-- 最好是奇數項，不然電腦版上字的對齊會亂掉 -->
                     <li><a href="#papers">投稿文章數量</a></li>
-                    <li><a href="#date">舉辦日期</a></li>
                     <li><a href="#researcher">研究者</a></li>
-                    <li><a href="#five">歷屆投稿題目</a></li>
+                    <li><a href="#paper_title">歷屆投稿題目</a></li>
+                    <li><a href="#date">舉辦日期</a></li>
                 </ul>      
             </article>
 
             
-            <!-- 舉辦時間 -->
+            <!-- 舉辦日期 -->
             <article id="date">
                 <h2 class="major">舉辦日期</h2>
                 <span class="image main"><img src="images/舉辦時間.jpeg" alt="" /></span>
@@ -137,15 +269,15 @@
                 <ul>
                     <!-- 最好是奇數項，不然電腦版上字的對齊會亂掉 -->
                     <li><a href="#papers">投稿文章數量</a></li>
-                    <li><a href="#location">舉辦地點</a></li>
                     <li><a href="#researcher">研究者</a></li>
-                    <li><a href="#five">歷屆投稿題目</a></li>
+                    <li><a href="#paper_title">歷屆投稿題目</a></li>
+                    <li><a href="#location">舉辦地點</a></li>
                 </ul>    
                 
             </article>
             
-                        <!-- 第五項 -->
-            <article id="five">
+                        <!-- 歷屆投稿題目 -->
+            <article id="paper_title">
                 <h2 class="major">歷屆投稿題目</h2>
                 <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
                 <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.
@@ -154,9 +286,9 @@
                 <ul>
                     <!-- 最好是奇數項，不然電腦版上字的對齊會亂掉 -->
                     <li><a href="#papers">投稿文章數量</a></li>
+                    <li><a href="#researcher">研究者</a></li>
                     <li><a href="#location">舉辦地點</a></li>
                     <li><a href="#date">舉辦日期</a></li>
-                    <li><a href="#researcher">研究者</a></li>
                 </ul>   
 
             </article>
