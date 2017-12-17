@@ -8,10 +8,10 @@ const x = d3.scaleLinear().domain([1993, 2017]).range([0, width]);
 const y = d3.scaleLinear().domain([0, 350]).range([height, 0]);
 const line = d3.line().x(d => x(d.year)).y(d => y(d.population));
 
-const chart = d3.select('svg').append('g')
+const chart = d3.select('#paper_line').append('g')
   .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
   
-const tooltip = d3.select('#tooltip');
+const tooltip = d3.select('#line_tooltip');
 const tooltipLine = chart.append('line');
   
 // Add the axes and a title
@@ -82,7 +82,7 @@ function drawTooltip() {
 //    .style('left', (d3.event.pageX-100)+'px') //資訊框位置跟著滑鼠跑
 //    .style('top', (d3.event.pageY-100)+'px') //d3.event.pageY是滑鼠的位置函數
     .style('left', '100px') //固定資訊框位置
-    .style('top', '340px') //固定資訊框位置
+    .style('top', '246px') //固定資訊框位置
     .selectAll()
     .data(states).enter()
     .append('div')
