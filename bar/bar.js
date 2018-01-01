@@ -1,4 +1,9 @@
-        var margin_bar = {top: 20,right: 40,bottom: 30,left: 60},
+        var margin_bar = {
+                top: 20,
+                right: 40,
+                bottom: 30,
+                left: 60
+            },
             width_bar = 600 - margin_bar.left - margin_bar.right,
             height_bar = 400 - margin_bar.top - margin_bar.bottom;
 
@@ -21,15 +26,15 @@
             .append("g")
             .attr("transform", "translate(" + margin_bar.left + "," + margin_bar.top + ")");
 
-        d3.tsv("/bar/data.tsv", type, function(error, data) {
+        d3.tsv("/bar/data.tsv", type, function (error, data) {
             if (error) throw error;
 
-            x_bar.domain(data.map(function(d) {
+            x_bar.domain(data.map(function (d) {
                     return d.letter;
                 }))
                 .paddingInner(0.1)
                 .paddingOuter(0.5);
-            y_bar.domain([0, d3.max(data, function(d) {
+            y_bar.domain([0, d3.max(data, function (d) {
                 return d.frequency;
             })]);
 
@@ -54,24 +59,24 @@
                 .data(data)
                 .enter().append("rect")
                 .attr("class", "bar")
-                .attr("x", function(d) {
+                .attr("x", function (d) {
                     return x_bar(d.letter);
                 })
                 .attr("width", x_bar.bandwidth())
-                .attr("y", function(d) {
+                .attr("y", function (d) {
                     return y_bar(d.frequency);
                 })
-                .attr("height", function(d) {
+                .attr("height", function (d) {
                     return height_bar - y_bar(d.frequency);
                 })
-                .on("mousemove", function(d) {
+                .on("mousemove", function (d) {
                     bar_tooltip
                         .style("left", d3.event.pageX - 50 + "px")
                         .style("top", d3.event.pageY - 70 + "px")
                         .style("display", "inline-block")
-                        .html((d.letter) + "<br><span>" + (d.frequency/4732)*100 + "%" + "</span>");
+                        .html((d.letter) + "<br><span>" + (d.frequency / 4732) * 100 + "%" + "</span>");
                 })
-                .on("mouseout", function(d) {
+                .on("mouseout", function (d) {
                     bar_tooltip.style("display", "none");
                 });
         });
