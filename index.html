@@ -32,7 +32,7 @@
             <div class="content">
                 <div class="inner">
                     <h1>動物行為暨生態研討會歷史紀錄</h1>
-                    <p>動行研討會是台灣每年最大的一場，動物研究發表與交流的聚會。每年動物研究相關人員，大多會參加這場聚會。許多研究也會在這場研討會發表...(未完)</p>
+                    <p>動行研討會是台灣每年最大的一場，動物研究發表與交流的聚會，至今已經超過25年。</br>每年動物生態研究相關人員，大多會投稿參加這場研討會。</p>
                 </div>
             </div>
             <nav>
@@ -61,20 +61,28 @@
 
                 <!--<span class="image main"><img src="images/投稿篇數折線圖.png" alt="" /></span>-->
 
-                <p>這裡可以做一張總覽，這幾屆總共發表幾篇，口頭跟海報各有幾篇，比例多少</p>
+                <p>
+                研討會舉辦初期，只有口頭發表的形式，到了1998年後，才有了海報發表的形式。到了2007年後，海報發表的數量超越口頭報告。
+                </br>
+                從1993年的第四屆研討會，到2017年，已經累積 XXXX 篇投稿文章。每年的投稿篇數，在2002年時超過百篇，2010年至2017年則維持在300篇左右。
+                </p>
 
                 <!-- 加入D3js折線圖html部分 -->
                 <svg id="paper_line" width='600' height='400'></svg>
-                <div id='line_tooltip' style='position:absolute;background-color:#151010;padding:5px'></div>
+                <!--        <div id='line_tooltip' style='position:absolute;background-color:#151010;padding:5px'></div>-->
                 <!-- 加入D3js折線圖js部分 -->
                 <script src="assets/js/d3.min.js"></script>
-                <script src="assets/js/D3_line.js"></script>
+                <script src="line/D3_line.js"></script>
                 <style>
+                    #paper_line {
+                        background-color: #000000;
+                    }
                     /* xy軸-軸線與文字設定 */
                     
                     g.tick,
                     g line,
                     g path.domain {
+                        color: white;
                         stroke: white;
                     }
                     /*折線圖標題設定*/
@@ -83,11 +91,13 @@
                         stroke: white;
                         font-size: 30px;
                     }
+                    
+                    #line_tooltip {
+                        position: absolute;
+                        background-color: #151010;
+                        padding: 5px;
+                    }
                 </style>
-
-
-
-                <p>描述折線圖內容</p>
 
                 <ul>
                     <li><a href="#researcher">研究者</a></li>
@@ -100,13 +110,69 @@
             <!-- 研究者 -->
             <article id="researcher">
                 <h2 class="major">研究者</h2>
-                <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 
-                <h3>預計做兩張</h3>
-                <p>一張做長條圖(預計)：表示發表篇數的人數分布，只發表一篇的人最多</p>
-                
+                <p>1993年第四屆研討會到2017年之間，總共有4732位研究者曾投稿參加研討會。其中只投稿過一篇的研究者共2971位，佔總人數的62.79%；而曾投稿超過5篇以上的研究者，共有437位，佔總人數的9.23%。</p>
 
-                <p>一張Network圖：表示每個作者發表文章數量跟合作狀況。</p>
+                <div id="people_paper_bar"></div>
+                <script src="assets/js/d3.min.js"></script>
+                <script src="/bar/bar.js"></script>
+                <style>
+                    #people_paper_bar .bar {
+                        fill: #3fac71;
+                    }
+                    
+                    #people_paper_bar .bar:hover {
+                        fill: #b07bc1;
+                    }
+                    
+                    #people_paper_bar .label {
+                        fill: black;
+                        font: 20px sans-serif;
+                        text-anchor: middle;
+                    }
+                    
+                    #people_paper_bar .tick {
+                        font: 18px sans-serif;
+                    }
+                    
+                    #bar_toolTip {
+                        pointer-events: none;
+                        position: absolute;
+                        display: none;
+                        min-width: 50px;
+                        height: auto;
+                        background: none repeat scroll 0 0 #ffffff;
+                        padding: 9px 14px 6px 14px;
+                        border-radius: 2px;
+                        text-align: center;
+                        line-height: 1.3;
+                        color: #5B6770;
+                        box-shadow: 0px 3px 9px rgba(0, 0, 0, .15);
+                    }
+                    
+                    #bar_toolTip:after {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-left: 12px solid transparent;
+                        border-right: 12px solid transparent;
+                        border-top: 12px solid white;
+                        position: absolute;
+                        bottom: -10px;
+                        left: 50%;
+                        margin-left: -12px;
+                    }
+                    
+                    #bar_toolTip span {
+                        font-weight: 500;
+                        color: #081F2C;
+                    }
+                </style>
+
+                <p><b>研究者合作情形</b></p>
+                <p>這個網狀圖顯示，投稿超過5篇以上的研究者，他們之間的合作關係。圓圈大小代表這位研究者的投稿篇數，有連線的研究者，代表曾經共同在研討會發表文章，合作發表文章數越多，連結線寬度越寬。</p>
+
+
 
 
                 <ul>
@@ -122,10 +188,9 @@
             <!-- 舉辦地點 -->
             <article id="location">
                 <h2 class="major">舉辦地點</h2>
-                <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+<!--                <span class="image main"><img src="images/pic01.jpg" alt="" /></span>-->
 
-                <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.
-                </p>
+                <p>目前研討會在11個縣市舉辦過，包括23個大學院校與政府機關。歷年來，在北中南區舉辦的次數相當，而在東部舉辦的次數相對較少。</p>
 
                 <div id="map" style="height:300px;"></div>
 
@@ -264,8 +329,7 @@
             <article id="date">
                 <h2 class="major">舉辦日期</h2>
                 <span class="image main"><img src="images/舉辦時間.jpeg" alt="" /></span>
-                <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.
-                </p>
+                <p>研討會的舉辦天數，從1995年之後，幾乎都是舉辦二天，唯一例外是2000年時，曾經舉辦三天。而1993年與1994年時，可能因為參與人數較少，所以都只舉辦一天。而最近5屆的研討會，主辦單位都選擇在週一與週二舉辦。</p>
 
                 <ul>
                     <!-- 最好是奇數項，不然電腦版上字的對齊會亂掉 -->
@@ -577,7 +641,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
             </ul>
 
 
-            <p class="copyright">&copy; 製作團隊：<a href="#">一群被動物玩的人</a>｜版型來源：html5up.net @ajlkn </p>
+            <p class="copyright">&copy; 製作團隊：<a href="#">一群(曾)跟動物玩的人</a>｜版型來源：html5up.net @ajlkn </p>
         </footer>
 
     </div>
