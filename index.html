@@ -115,7 +115,6 @@
                 <p>1993年第四屆研討會到2017年之間，總共有4732位研究者曾投稿參加研討會。其中只投稿過一篇的研究者共2971位，佔總人數的62.79%；而曾投稿超過5篇以上的研究者，共有437位，佔總人數的9.23%。</p>
 
                 <div id="people_paper_bar"></div>
-                <!--                <script src="assets/js/d3.min.js"></script>-->
                 <script src="bar/bar.js"></script>
                 <style>
                     #people_paper_bar .bar {
@@ -193,128 +192,11 @@
 
                 <p>目前研討會在11個縣市舉辦過，包括23個大學院校與政府機關。歷年來，在北中南區舉辦的次數相當，而在東部舉辦的次數相對較少。</p>
 
-                <div id="map" style="height:300px;"></div>
-
-                <script>
-                    //畫出地圖    
-                    function initMap() {
-
-                        //設定地圖初始的位置與尺度  
-                        var map; //畫出地圖 
-                        map = new google.maps.Map(document.getElementById('map'), {
-                            center: {
-                                lat: 25.015468,
-                                lng: 121.5429422
-                            },
-                            zoom: 7,
-
-                            //控制捲動控制項目
-                            gestureHandling: 'auto',
-
-
-                            //設定地圖樣式
-                            styles: [{
-                                    "featureType": "administrative",
-                                    "elementType": "labels.text.fill",
-                                    "stylers": [{
-                                        "color": "#444444"
-                                    }]
-                                },
-                                {
-                                    "featureType": "landscape",
-                                    "elementType": "all",
-                                    "stylers": [{
-                                        "color": "#f2f2f2"
-                                    }]
-                                },
-                                {
-                                    "featureType": "poi",
-                                    "elementType": "all",
-                                    "stylers": [{
-                                        "visibility": "off"
-                                    }]
-                                },
-                                {
-                                    "featureType": "road",
-                                    "elementType": "all",
-                                    "stylers": [{
-                                            "saturation": -100
-                                        },
-                                        {
-                                            "lightness": 45
-                                        }
-                                    ]
-                                },
-                                {
-                                    "featureType": "road.highway",
-                                    "elementType": "all",
-                                    "stylers": [{
-                                        "visibility": "simplified"
-                                    }]
-                                },
-                                {
-                                    "featureType": "road.arterial",
-                                    "elementType": "labels.icon",
-                                    "stylers": [{
-                                        "visibility": "off"
-                                    }]
-                                },
-                                {
-                                    "featureType": "transit",
-                                    "elementType": "all",
-                                    "stylers": [{
-                                        "visibility": "off"
-                                    }]
-                                },
-                                {
-                                    "featureType": "water",
-                                    "elementType": "all",
-                                    "stylers": [{
-                                            "color": "#46bcec"
-                                        },
-                                        {
-                                            "visibility": "on"
-                                        }
-                                    ]
-                                }
-                            ]
-
-                        });
-
-                        //加上標記  
-                        //先給標記經緯度
-                        var taipei = {
-                            lat: 25.015468,
-                            lng: 121.5429422
-                        };
-                        //畫出標記
-                        var marker = new google.maps.Marker({
-                            position: taipei,
-                            map: map
-                        });
-
-
-                        //加入資訊框內容
-                        //資訊內容
-                        var contentString =
-                            '<h3>測試</h3>';
-
-                        //設定資訊匡變數
-                        var infowindow = new google.maps.InfoWindow({
-                            content: contentString
-                        });
-
-                        //連結資訊框跟點的位置
-                        marker.addListener('click', function() {
-                            infowindow.open(map, marker);
-                        });
-
-                    }
-                </script>
-
+                <div id="gmap" style="height:300px;"></div>
+                <script src="assets/js/gmap.js"></script>
 
                 <!--加入個人Key的API，同時可以在這裡強制顯示語言-->
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB12QIf5jaEXri7i4BM8YzTybUJQwq2pqs&language=zh-tw&region=tw&callback=initMap" async defer></script>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHao1N9YfzitGdDvPRzVZN9HNiCu00p7Y&language=zh-tw&region=tw&callback=initMap"></script>
 
                 <ul>
                     <!-- 最好是奇數項，不然電腦版上字的對齊會亂掉 -->
@@ -655,6 +537,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
 
 </body>
 
