@@ -2,8 +2,8 @@
 function initMap() {
 
     //設定地圖初始的位置與尺度  
-    var map; //畫出地圖 
-    map = new google.maps.Map(document.getElementById('gmap'), {
+    var gmap; //畫出地圖 
+    gmap = new google.maps.Map(document.getElementById('gmap'), {
         center: {
             lat: 25.015468,
             lng: 121.5429422
@@ -218,7 +218,7 @@ function initMap() {
     //畫出標記
     var marker = new google.maps.Marker({
         position: taipei,
-        map: map
+        map: gmap
     });
 
 
@@ -234,7 +234,7 @@ function initMap() {
 
     //連結資訊框跟點的位置
     marker.addListener('click', function () {
-        infowindow.open(map, marker);
+        infowindow.open(gmap, marker);
     });
 
 }
